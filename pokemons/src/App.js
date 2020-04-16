@@ -9,7 +9,7 @@ function App() {
   const [nextUrl, setNextUrl] = useState('');
   const [prevUrl, setPrevUrl] = useState('');
   const [loading, setLoading] = useState(true);
-  const initialURL = 'https://pokeapi.co/api/v2/pokemon'
+  const initialURL = 'https://pokeapi.co/api/v2/pokemon/?limit=30&offset=0'
 
   useEffect(() => {
     async function fetchData() {
