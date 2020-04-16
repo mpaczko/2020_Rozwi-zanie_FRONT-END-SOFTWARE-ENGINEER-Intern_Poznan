@@ -41,17 +41,6 @@ function App() {
     setLoading(false);
   }
 
-  const sortBy = async (pokemon ,type) => {
-    
-    setLoading(true);
-    if(type==='weight'){
-      pokemon.sort(function(a,b){
-        return a.weight-b.weight
-      })
-       
-    }
-    
-  }
 
   const loadPokemon = async (data) => {
     let _pokemonData = await Promise.all(data.map(async pokemon => {
@@ -69,7 +58,7 @@ function App() {
           <>
             <div className="btn">
               <button onClick={prev}>Prev</button>
-              <button onClick={sortBy}>Sort by height</button>
+              
               <button onClick={next}>Next</button>
             </div>
             <div className="grid-container">
